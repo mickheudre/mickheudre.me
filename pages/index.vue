@@ -1,27 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        Mickaël Heudre
-      </h1>
+  <div class="flex flex-col justify-center items-center">
+    <div class=" max-w-screen-sm">
+      <!-- <div class="bg-hero-pattern h-64"></div> -->
+      <img src="../assets/images/heading.jpg" class="mix-blend-screen h-72 py-8"/>
       <div v-for="block in content.results" :key="block.id"> 
-        <p v-if="isValidParagraph(block)">{{ block.paragraph.text[0].text.content }}</p>
+        <h1 v-if="isValidHeading1(block)" class="font-brand text-white text-5xl my-2">
+        {{ block.heading_1.text[0].text.content }}
+      </h1>
+        <paragraph v-if="isValidParagraph(block)" class="font-sans text-white" v-bind:block="block">
+        <!-- <span v-for="text in block.paragraph.text" :key="text.text.content"> {{ text.text.content }} </span> -->
+        </paragraph>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Paragraph from '../components/Notion/Paragraph'
 export default {
+  components: { Paragraph },
   data() {
     return {
       content: {}
     }
   },
   async asyncData({ $axios }) {
-  const content = await $axios.$get('https://api.notion.com/v1/blocks/b8cb531fc72942b3a7ed8ab383bd1a52/children', {
+  const content = await $axios.$get('https://api.notion.com/v1/blocks/419a238bfa0f46fb802ce0f2e1feaa5d/children', {
   })
-  console.log(content)
   return { content }
 },
 methods: {
@@ -33,53 +38,16 @@ methods: {
       return false
     }
     return true
+  },
+  isValidHeading1(block) {
+    if (block.type !== 'heading_1') {
+      return false
+    }
+    if (block.heading_1.text.length == 0) {
+      return false
+    }
+    return true
   }
 }
 }
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
