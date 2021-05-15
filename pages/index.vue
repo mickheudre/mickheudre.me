@@ -48,6 +48,19 @@ methods: {
     }
     return true
   }
-}
+},
+ head() {
+      return {
+        titre: 'Mickaêl Heudre',
+        meta: [
+          // `hid` est un identifiant unique. N'utilisez pas `vmid` pour cela car cela ne marchera pas.
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Mickaël Heudre crée des applications pour ordinateurs et mobiles'
+          }
+        ]
+      }
+ }
 }
 </script>
