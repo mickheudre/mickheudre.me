@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <h1 class="title">
-        mickheudre.me
+        Mickaël Heudre
       </h1>
       <div v-for="block in content.results" :key="block.id"> 
         <p v-if="isValidParagraph(block)">{{ block.paragraph.text[0].text.content }}</p>
