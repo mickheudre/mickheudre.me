@@ -5,7 +5,7 @@
         mickheudre.me
       </h1>
       <div v-for="block in content.results" :key="block.id"> 
-        <p v-if="block.type === 'paragraph'">{{ block.paragraph.text[0].text.content }}</p>
+        <p v-if="isValidParagraph(block)">{{ block.paragraph.text[0].text.content }}</p>
       </div>
     </div>
   </div>
@@ -24,6 +24,17 @@ export default {
   console.log(content)
   return { content }
 },
+methods: {
+  isValidParagraph(block) {
+    if (block.type !== 'paragraph') {
+      return false
+    }
+    if (block.paragraph.text.length == 0) {
+      return false
+    }
+    return true
+  }
+}
 }
 </script>
 
