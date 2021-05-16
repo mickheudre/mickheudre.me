@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-primary">
+  <div class="min-h-screen bg-primary">
     <!-- <div>
       <ul class="flex flex-row w-full justify-end space-x-4 px-8 py-4">
         <li>
