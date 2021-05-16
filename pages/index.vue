@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center">
+  <div class="flex flex-col justify-center items-center mx-8">
     <div class=" max-w-screen-sm">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
       <img src="../assets/images/heading.jpg" class="mix-blend-screen h-72 py-8"/>
@@ -7,7 +7,7 @@
         <h1 v-if="isValidHeading1(block)" class="font-brand text-white text-5xl my-2">
         {{ block.heading_1.text[0].text.content }}
       </h1>
-        <paragraph v-if="isValidParagraph(block)" class="font-sans text-white" v-bind:block="block">
+        <paragraph v-if="isValidParagraph(block)" class="font-sans text-white my-2" v-bind:block="block">
         <!-- <span v-for="text in block.paragraph.text" :key="text.text.content"> {{ text.text.content }} </span> -->
         </paragraph>
       </div>
