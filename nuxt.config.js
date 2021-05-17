@@ -37,8 +37,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: 'https://www.mickheudre.me/',
+  },
   axios: {
     headers: {
       common: {
