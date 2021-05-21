@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mickheudre.me',
+    title: 'Mickaël Heudre crée des applications',
     htmlAttrs: {
       lang: 'en'
     },
@@ -41,7 +41,7 @@ export default {
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'https://www.mickheudre.me/',
+    hostname: 'https://mickheudre.me',
   },
   axios: {
     headers: {
