@@ -11,6 +11,8 @@
         <!-- <span v-for="text in block.paragraph.text" :key="text.text.content"> {{ text.text.content }} </span> -->
         </paragraph>
       </div>
+      <nuxt-link to="about" class="text-white font-semibold hover:underline">En savoir plus</nuxt-link>
+
     </div>
   </div>
 </template>
