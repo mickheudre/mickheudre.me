@@ -2,6 +2,7 @@
   <div class="flex flex-col justify-center items-center mx-8">
     <div class="max-w-screen-sm mt-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
+       <img src="../assets/images/about.png" class="mix-blend-screen pt-4 pb-8"/>
       <div v-for="block in content.results" :key="block.id"> 
         <h1 v-if="isValidHeading1(block)" class="font-sans font-bold text-white text-3xl my-6">
         {{ block.heading_1.text[0].text.content }}
