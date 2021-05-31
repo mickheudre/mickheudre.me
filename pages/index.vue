@@ -10,9 +10,6 @@
         <paragraph v-if="isValidParagraph(block)" class="font-sans text-white my-2" v-bind:block="block">
         <!-- <span v-for="text in block.paragraph.text" :key="text.text.content"> {{ text.text.content }} </span> -->
         </paragraph>
-        <p v-if="isValidBulletedList(block)">
-          ddd
-        </p>
       </div>
       <nuxt-link to="about" class="text-white font-semibold hover:underline">En savoir plus</nuxt-link>
     </div>
@@ -34,18 +31,6 @@ export default {
   return { content }
 },
 methods: {
-  isValidBulletedList(block) {
-        console.log(block.type)
-
-    if (block.type !== 'bulleted_list_item') {
-      return false
-    }
-    if (block.bulleted_list_item.text.length == 0) {
-      return false
-    }
-    console.log("bulleted")
-    return true
-  },
   isValidParagraph(block) {
     console.log(block.type)
     if (block.type !== 'paragraph') {
