@@ -1,18 +1,20 @@
 <template>
   <div class="flex flex-col justify-center items-center mx-8">
-    <div class=" max-w-screen-sm">
+    <div class=" max-w-screen-sm  mb-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
       <img src="../assets/images/heading.jpg" class="mix-blend-screen h-72 py-8"/>
       <div v-for="block in content.results" :key="block.id"> 
         <h1 v-if="isValidHeading1(block)" class="font-brand text-white text-5xl my-2">
-        {{ block.heading_1.text[0].text.content }}
-      </h1>
+          {{ block.heading_1.text[0].text.content }}
+        </h1>
         <paragraph v-if="isValidParagraph(block)" class="font-sans text-white my-2" v-bind:block="block">
         <!-- <span v-for="text in block.paragraph.text" :key="text.text.content"> {{ text.text.content }} </span> -->
         </paragraph>
+        <p v-if="isValidBulletedList(block)">
+          ddd
+        </p>
       </div>
       <nuxt-link to="about" class="text-white font-semibold hover:underline">En savoir plus</nuxt-link>
-
     </div>
   </div>
 </template>
@@ -32,7 +34,20 @@ export default {
   return { content }
 },
 methods: {
+  isValidBulletedList(block) {
+        console.log(block.type)
+
+    if (block.type !== 'bulleted_list_item') {
+      return false
+    }
+    if (block.bulleted_list_item.text.length == 0) {
+      return false
+    }
+    console.log("bulleted")
+    return true
+  },
   isValidParagraph(block) {
+    console.log(block.type)
     if (block.type !== 'paragraph') {
       return false
     }
