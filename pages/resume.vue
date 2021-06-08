@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row justify-center">
-      <div class="w-32 hidden lg:flex">
-  </div>
+    <div class="w-32 hidden lg:flex">
+    </div>
     <div ref="content" class="max-w-screen-sm sm:mt-16 mt-8 mb-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
        <img src="../assets/images/about.png" class="sm:block hidden mix-blend-screen pb-4 "/>
@@ -25,11 +25,10 @@
         </p>
       </div>
     </div>
-
-    <aside class="ml-32 lg:flex lg:flex-col px-4 hidden w-72">
+    <aside class="ml-48 lg:flex lg:flex-col hidden w-72">
       <div class="sticky top-1/3">
         <h2  class="uppercase font-brand text-lg font-bold text-white">
-          Table of contents
+          Table des matières
         </h2>
         <nav class="mt-4">
           <ul>
@@ -41,7 +40,7 @@
                 role="button"
                 v-if="isValidHeading2(block)"
                 :class="block.id === currentlyActiveToc ? 'font-bold' : 'font-normal'"
-                class="font-sans text-white text-sm  mt-4 block"*
+                class="font-sans text-white text-sm  mt-4 block"
                 :href="`#${block.id}`"
                 > {{ block.heading_2.text[0].text.content }}</a
               >
@@ -51,7 +50,7 @@
                 :class="block.id === currentlyActiveToc ? 'font-bold' : 'font-normal'"
                 :href="`#${block.id}`"
                 class="font-sans text-white text-sm block my-1 ml-4"
-                > {{ block.heading_3.text[0].text.content }}</a
+                > {{ block.heading_3.text[0].text.content.split('|')[0] }}</a
               >
             </li>
           </ul>
