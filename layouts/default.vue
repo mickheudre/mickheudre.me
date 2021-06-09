@@ -1,10 +1,10 @@
 <template>
   <div id="default" class="min-h-screen bg-primary">
-  <div v-if="$route.path != '/'" class="transform fixed top-2/4 -left-16 -rotate-90">
+  <!-- <div v-if="$route.path != '/'" class="transform fixed top-2/4 -left-16 -rotate-90">
     <nuxt-link to="/" class="font-sans font-extralight text-white text-lg mx-2">Mickaël Heudre</nuxt-link>
     <span class="font-sans font-extralight text-white text-lg mx-2">-</span>
     <nuxt-link to="resume" class="font-sans font-extralight text-white text-lg mx-2">CV</nuxt-link>
-  </div>
+  </div> -->
     <!-- <div>
       <ul class="flex flex-row w-full justify-end space-x-4 px-8 py-4">
         <li>
