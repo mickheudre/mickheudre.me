@@ -4,8 +4,8 @@
     </div>
     <div ref="content" class="max-w-screen-sm sm:mt-16 mt-8 mb-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
-       <img src="../assets/images/about.png" class="sm:block hidden mix-blend-screen pb-4 "/>
-       <img src="../assets/images/about-mobile.png" class="sm:hidden mix-blend-screen pb-0"/>
+       <img src="../assets/images/about.jpg" class="sm:block hidden mix-blend-screen pb-4 "/>
+       <img src="../assets/images/about-mobile.jpg" class="sm:hidden mix-blend-screen pb-0"/>
 
       <div v-for="block in content.results" :key="block.id"> 
         <h1 v-if="isValidHeading1(block)" class="font-brand font-bold text-white text-4xl my-6">

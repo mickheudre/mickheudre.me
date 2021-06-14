@@ -59,7 +59,7 @@ methods: {
           {
             hid: 'description',
             name: 'description',
-            content: 'Mickaël Heudre crée des applications pour ordinateurs et mobiles'
+            content: 'Je crée des applications pour ordinateurs et mobiles. J\'interviens à l\'intersection du développement, du design et du management de produits'
           }
         ]
       }
