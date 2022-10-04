@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center mx-8">
+  <div class="flex flex-col justify-center items-center mx-8 min-h-screen">
     <div class="max-w-screen-sm sm:mt-16 mt-8 mb-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
        <img src="../assets/images/about.jpg" alt="abstract image" class="sm:block hidden mix-blend-screen pb-8 "/>
