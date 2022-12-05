@@ -13,6 +13,10 @@ module.exports = {
       ...theme('colors'),
       'primary': '#144552',
      }),
+     textColor: theme => ({
+      ...theme('colors'),
+      'primary': '#144552',
+     }),
     fontFamily: {
       'brand': ['bluunext'],
       'sans': ['Raleway']

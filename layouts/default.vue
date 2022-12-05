@@ -1,9 +1,12 @@
 <template>
-  <div id="default" class="min-h-screen bg-primary">
-  <div v-if="$route.path != '/'" class="transform fixed top-2/4 -left-16 -rotate-90 hidden sm:block">
-    <nuxt-link to="/" class="font-sans font-extralight text-white text-lg mx-2">Mickaël Heudre</nuxt-link>
-    <span class="font-sans font-extralight text-white text-lg mx-2">-</span>
-    <nuxt-link to="resume" class="font-sans font-extralight text-white text-lg mx-2">CV</nuxt-link>
+  <div id="default" class="min-h-screen  bg-primary">
+  <div v-if="$route.path != '/'" class="fixed w-full bg-primary top-0 hidden sm:flex flex-row justify-between z-50">
+    <nuxt-link to="/" class="font-brand text-white text-xl mx-12 my-8">Mickaël Heudre</nuxt-link>
+    <div class="flex flex-row my-8 mx-16"> 
+      <nuxt-link to="portfolio" class="font-sans  text-white text-lg mx-8  hover:underline">Portfolio</nuxt-link>
+      <nuxt-link to="resume" class="font-sans  text-white text-lg mx-8 hover:underline">CV</nuxt-link>
+
+    </div>
   </div>
     <!-- <div>
       <ul class="flex flex-row w-full justify-end space-x-4 px-8 py-4">
@@ -15,7 +18,7 @@
         </li>
       </ul>
     </div> -->
-    <Nuxt />
+    <Nuxt class="sm:px-0 px-6"/>
   </div>
 </template>
 <style>

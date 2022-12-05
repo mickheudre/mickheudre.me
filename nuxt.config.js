@@ -42,7 +42,12 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    ['~/modules/imageExtract.js',
+      {
+    	baseUrl: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/',
+      }
+    ]
   ],
   sitemap: {
     hostname: 'https://mickheudre.me',
