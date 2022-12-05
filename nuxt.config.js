@@ -43,7 +43,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    ['~/modules/imageExtract.js',
+    ['nuxt-image-extractor',
       {
     	baseUrl: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/',
       }
