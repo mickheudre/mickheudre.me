@@ -1,5 +1,5 @@
 <template>
-    <img class="m-8" :src="link.image.file.url" />
+    <img class="my-8 mx-auto" :src="link.image.file.url" />
 </template>
 
 <script>
