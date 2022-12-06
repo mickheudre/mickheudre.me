@@ -54,4 +54,8 @@ img {
   @apply w-3/4
 }
 
+p, li {
+  @apply font-light
+}
+
 </style>

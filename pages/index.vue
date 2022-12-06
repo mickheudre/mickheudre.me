@@ -8,7 +8,7 @@
         <h1 v-if="isValidHeading1(block)" class="font-brand text-white text-5xl mt-2 mb-6">
           {{ block.heading_1.text[0].text.content }}
         </h1>
-        <paragraph v-if="isValidParagraph(block)" class="font-sans text-white my-2" v-bind:block="block">
+        <paragraph v-if="isValidParagraph(block)" class="font-sans font-light text-white my-2" v-bind:block="block">
           <!-- <span v-for="text in block.paragraph.text" :key="text.text.content"> {{ text.text.content }} </span> -->
         </paragraph>
       </div>
