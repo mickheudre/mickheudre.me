@@ -19,7 +19,9 @@ module.exports = {
      }),
     fontFamily: {
       'brand': ['bluunext'],
-      'sans': ['Raleway']
+      'sans': ['Lato'],
+      'serif': ['Playfair Display'],
+      'name': ['Basteleur']
     },
     extend: {
       backgroundImage: theme => ({

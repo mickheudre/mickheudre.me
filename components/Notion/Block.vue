@@ -5,7 +5,6 @@
         </h1>
     <h3
       v-if="isValidHeading3(this.block)"
-      class="font-brand font-semibold text-2xl my-4"
     >
       {{ this.block.heading_3.text[0].text.content }}
     </h3>

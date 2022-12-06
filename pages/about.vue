@@ -6,7 +6,7 @@
        <img src="../assets/images/about-mobile.jpg" alt="abstract image" class="sm:hidden mix-blend-screen pb-4"/>
 
       <div v-for="block in content.results" :key="block.id"> 
-        <h1 v-if="isValidHeading1(block)" class="font-sans font-bold text-white text-3xl my-6">
+        <h1 v-if="isValidHeading1(block)" class="font-brand font-bold text-white text-3xl my-6">
         {{ block.heading_1.text[0].text.content }}
       </h1>
         <paragraph v-if="isValidParagraph(block)" class="font-sans text-white my-2" v-bind:block="block">

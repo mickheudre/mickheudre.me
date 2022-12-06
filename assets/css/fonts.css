@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
 
 @font-face {
     font-family: 'bluunext';
     src: url('../fonts/bluunext-bold-webfont.woff') format('woff');
     font-weight: 800;
     font-style: bold;
+}
+
+@font-face {
+    font-family: 'Basteleur';
+    src: url('../fonts/Basteleur-Moonlight.woff') format('woff');
 }
