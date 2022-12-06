@@ -45,13 +45,13 @@ export default {
 }
 </script>
 
-<style lang="css">
-h3 {
+<style  lang="css">
+h3  {
   @apply font-brand  text-3xl mt-8 mb-4 tracking-wide font-semibold;
 }
 
-img {
-  @apply w-3/4
+.notion-img {
+  @apply w-3/4 mx-auto my-8
 }
 
 p, li {

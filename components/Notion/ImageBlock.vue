@@ -1,5 +1,5 @@
 <template>
-    <img class="my-8 mx-auto" :src="link.image.file.url" />
+    <img class="notion-img" :src="link.image.file.url" />
 </template>
 
 <script>

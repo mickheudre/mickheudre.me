@@ -2,7 +2,7 @@
   <div class="flex flex-col justify-center items-center mx-8 min-h-screen">
     <div class=" max-w-screen-sm mb-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
-      <img src="../assets/images/heading.jpg" alt="mickael heudre" class="mix-blend-screen max-w-72 h-72 py-8"/>
+      <img src="../assets/images/heading.jpg" alt="mickael heudre" class="mix-blend-screen h-72 py-8"/>
       
       <div v-for="block in content.results" :key="block.id"> 
         <h1 v-if="isValidHeading1(block)" class="font-brand text-white text-5xl mt-2 mb-6">
