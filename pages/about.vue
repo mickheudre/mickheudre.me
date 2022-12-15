@@ -1,9 +1,8 @@
 <template>
   <div class="flex flex-col justify-center items-center mx-8 min-h-screen">
-    <div class="max-w-screen-sm sm:mt-16 mt-8 mb-16">
+    <div class="max-w-screen-sm sm:mt-16 pt-16 mb-8">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
-       <img src="../assets/images/about.jpg" alt="abstract image" class="sm:block hidden mix-blend-screen pb-8 "/>
-       <img src="../assets/images/about-mobile.jpg" alt="abstract image" class="sm:hidden mix-blend-screen pb-4"/>
+       <img src="../assets/images/runner.png" alt="abstract image" class="h-64"/>
 
       <div v-for="block in content.results" :key="block.id"> 
         <h1 v-if="isValidHeading1(block)" class="font-brand font-bold text-white text-3xl my-6">
