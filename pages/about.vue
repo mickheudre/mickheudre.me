@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center mx-8 min-h-screen">
+  <div class="flex flex-col justify-center items-center  min-h-screen">
     <div class="max-w-screen-sm sm:mt-16 pt-16 mb-8">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
        <img src="../assets/images/runner.png" alt="abstract image" class="h-64"/>

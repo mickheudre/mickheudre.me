@@ -18,7 +18,7 @@
         </li>
       </ul>
     </div> -->
-    <Nuxt class="sm:px-0 px-2"/>
+    <Nuxt class="sm:px-0 px-8"/>
   </div>
 </template>
 <style>
