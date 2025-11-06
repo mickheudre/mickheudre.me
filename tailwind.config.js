@@ -1,36 +1,20 @@
-module.exports = {
-  mode: 'jit',
-  purge: [
-  './components/**/*.{vue,js}',
-  './layouts/**/*.vue',
-  './pages/**/*.vue',
-  './plugins/**/*.{js,ts}',
-  './nuxt.config.{js,ts}'
-  ],
-  darkMode: false, // or 'media' or 'class'
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [],
   theme: {
-    backgroundColor: theme => ({
-      ...theme('colors'),
-      'primary': '#144552',
-     }),
-     textColor: theme => ({
-      ...theme('colors'),
-      'primary': '#144552',
-     }),
-    fontFamily: {
-      'brand': ['bluunext'],
-      'sans': ['Lato'],
-      'serif': ['Playfair Display'],
-      'name': ['Basteleur']
-    },
     extend: {
-      backgroundImage: theme => ({
-        'hero-pattern': "url('../images/heading.jpg')",
-       })
+      colors: {
+        primary: "#144552"
+      },
+      fontFamily: {
+        brand: "bluunext",
+        name: "Basteleur",
+        sans: 'Lato',
+        serif: 'Playfair Display'
+      }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
+
