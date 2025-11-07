@@ -4,10 +4,9 @@
     <a v-else :href="text.text.link.url" class="font-semibold hover:underline">{{ text.text.content }}</a>
 </template>
 
-<script>
-export default {
-    props: {
-        text: Object
-    }
+<script setup>
+const props = defineProps(['text']);
+if (props.text.link) {
+    console.log(text)
 }
 </script>

@@ -19,9 +19,7 @@
   <NotionImage v-if="isValidImage(block)"
   :link="block" 
   />
-  <li v-if="isValidBulletedListItem(block)">
-    {{ block.bulleted_list_item.rich_text[0].plain_text }}
-  </li>
+  <NotionBulletedList v-if="isValidBulletedListItem(block)" :block />
   <NotionToggle v-if="isValidToggleItem(block)" :block="block" />
   <NotionVideo v-if="isValidVideo(block)" :block="block" />
   <!-- <Table v-if="isValidTableItem(block)" :block="block" /> -->
