@@ -12,7 +12,6 @@
     </h3>
     <NotionParagraph
     v-if="isValidParagraph(block)"
-    class="my-2"
     v-bind:block="block"
     >
   </NotionParagraph>

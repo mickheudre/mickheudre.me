@@ -1,5 +1,5 @@
 <template>
-    <p ref="paragraph"> 
+    <p class="notion-paragraph"> 
         <NotionStyledText v-for="(element, index) in block.paragraph.rich_text" :key="index" :text="element"></NotionStyledText>
     </p>
 </template>
