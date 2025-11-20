@@ -3,7 +3,7 @@
     <div class=" max-w-screen-sm mb-16">
       <!-- <div class="bg-hero-pattern h-64"></div> -->
       <img src="../assets/images/heading.jpg" alt="mickael heudre" class="mix-blend-screen h-72 py-8"/>
-      <NotionPage class="heading text-white font-light" :page="headline" />
+      <NotionPage class=" text-white font-light" :page="headline" />
       <nuxt-link to="about" class="text-white font-semibold hover:underline">En savoir plus</nuxt-link>
     </div>
   </div>
@@ -23,11 +23,18 @@ headers : {
 
 </script>
 
-<style>
-.heading .notion-h1 {
+<style scoped>
+.notion-page :deep(.notion-h1) {
   @apply font-brand text-white text-5xl mt-2 mb-6;
 }
 
+.notion-page :deep(.notion-bulleted-list) {
+  @apply list-inside;
+}
+
+.notion-page :deep(.notion-paragraph) {
+  @apply my-2;
+}
 
 </style>
 
